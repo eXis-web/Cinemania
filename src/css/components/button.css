@@ -1,0 +1,201 @@
+/* ----------------------- Basic button styles ----------------------- */
+.btn {
+  display: block;
+  cursor: pointer;
+  font-family: var(--primary-font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  border-radius: 74px;
+  background: none;
+  border: none;
+  padding: 12px 24px;
+}
+/* ----------------------- /Basic button styles ----------------------- */
+
+/* ----------------------- Ordinary button styles ----------------------- */
+.btn-filled {
+  background: var(--primary-button-color);
+  color: #111111;
+}
+
+.btn-filled:hover,
+.btn-filled:focus {
+  background: #ffffff;
+  color: var(--primary-brand-color);
+  position: absolute;
+  background-clip: padding-box;
+  border: solid -1px transparent;
+}
+
+.btn-filled:hover::before,
+.btn-filled:focus::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: inherit;
+  background-image: var(--primary-button-color);
+}
+
+.btn-empty {
+  position: absolute;
+  background-clip: padding-box;
+  border: 1px solid transparent;
+  background-color: var(--dark-theme-background-color);
+  color: #ffffff;
+}
+
+.light-theme .btn-empty {
+  background-color: var(--light-theme-background-color);
+  color: #111111;
+}
+
+.btn-empty:hover,
+.btn-empty:focus {
+  color: var(--primary-brand-color);
+  background-color: #ffffff;
+}
+
+.light-theme .btn-empty:hover,
+.light-theme .btn-empty:focus {
+  background-color: #111111;
+}
+
+.btn-empty::before,
+.light-theme .btn-empty::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: inherit;
+  background-image: var(--primary-button-color);
+}
+
+.btn-empty:hover::before,
+.btn-empty:focus::before,
+.light-theme .btn-empty:hover::before,
+.light-theme .btn-empty:focus::before {
+  margin: 1px;
+}
+
+.btn-hero {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.btn-hero:hover,
+.btn-hero:focus {
+  background-color: #ffffff;
+  color: var(--primary-brand-color);
+  border: none;
+}
+/* ----------------------- /Ordinary button styles ----------------------- */
+
+/* ----------------------- Search button styles ----------------------- */
+.btn-search {
+  padding: 11px;
+}
+
+.icon-search {
+  width: 18px;
+  height: 18px;
+  fill: transparent;
+}
+
+.dark-theme .icon-search {
+  stroke: #ffffff;
+}
+
+.light-theme .icon-search {
+  stroke: #111111;
+}
+
+.btn-search:hover .icon-search,
+.btn-search:focus .icon-search {
+  stroke: var(--primary-brand-color);
+}
+
+@media screen and (min-width: 768px) {
+  .btn-search {
+    padding: 13px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .btn-search {
+    padding: 14px;
+  }
+
+  .icon-search {
+    width: 20px;
+    height: 20px;
+  }
+}
+/* ----------------------- /Search button styles ----------------------- */
+
+/* ----------------------- Number button styles ----------------------- */
+.btn-number {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  padding: 7px 6px;
+  border-radius: 50%;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.dark-theme .btn-number {
+  border: 1px solid var(--dark-theme-grey-color);
+  color: var(--dark-theme-grey-color);
+}
+
+.light-theme .btn-number {
+  border: 1px solid var(--light-theme-grey-color);
+  color: var(--light-theme-grey-color);
+}
+
+.btn-number.btn-current {
+  border: none;
+  background-image: var(--primary-button-color);
+}
+
+.dark-theme .btn-number.btn-current {
+  color: #ffffff;
+}
+
+.light-theme .btn-number.btn-current {
+  color: #111111;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-number {
+    width: 32px;
+    height: 32px;
+    padding: 9px;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .is-plenty .btn-number {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .btn-number {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+/* ----------------------- /Number button styles ----------------------- */
